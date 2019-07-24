@@ -717,3 +717,8 @@ nginx:
   tolerations: []
 
   affinity: {}
+  ## Only used if "affinity" is empty
+  podAntiAffinity:
+    ## Valid values are "soft" or "hard"; any other value indicates no anti-affinity
+    type: ""
+    topologyKey: "kubernetes.io/hostname"
